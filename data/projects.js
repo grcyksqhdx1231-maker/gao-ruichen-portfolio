@@ -416,11 +416,11 @@ export const projects = [
     assets: [
       {
         label: {
-          zh: "主视觉板",
-          en: "Primary board",
+          zh: "完整素材页",
+          en: "Full project page",
         },
-        type: "svg",
-        href: "./assets/projects/ai-assisted-memory/Frame 2147223885.svg",
+        type: "web",
+        href: "./assets/projects/ai-assisted-memory/index.html",
       },
       {
         label: {
@@ -465,11 +465,11 @@ export const projects = [
     assets: [
       {
         label: {
-          zh: "图案主板",
-          en: "Pattern board",
+          zh: "完整素材页",
+          en: "Full project page",
         },
-        type: "svg",
-        href: "./assets/projects/pattern-book/Frame 2147223890.svg",
+        type: "web",
+        href: "./assets/projects/pattern-book/index.html",
       },
       {
         label: {
@@ -584,7 +584,7 @@ export const projects = [
           en: "Game design PDF",
         },
         type: "pdf",
-        href: "./assets/projects/covers/hengyuan-protocol-game.jpg",
+        href: "./assets/projects/hengyuan-protocol-game/hengyuan-protocol-game.pdf",
       },
     ],
   },
@@ -613,11 +613,11 @@ export const projects = [
     assets: [
       {
         label: {
-          zh: "图板 01",
-          en: "Board 01",
+          zh: "完整素材页",
+          en: "Full project page",
         },
-        type: "image",
-        href: "./assets/projects/covers/high-rise-architecture.jpg",
+        type: "web",
+        href: "./assets/projects/high-rise-architecture/index.html",
       },
       {
         label: {
@@ -625,7 +625,7 @@ export const projects = [
           en: "Board 02",
         },
         type: "image",
-        href: "./assets/projects/covers/high-rise-architecture.jpg",
+        href: "./assets/projects/high-rise-architecture/第二张.png",
       },
     ],
   },
@@ -658,7 +658,7 @@ export const projects = [
           en: "Coursework PDF",
         },
         type: "pdf",
-        href: "./assets/projects/covers/undergraduate-design.jpg",
+        href: "./assets/projects/undergraduate-design/undergraduate-design.pdf",
       },
     ],
   },
