@@ -1,0 +1,10 @@
+{
+  "name": "portfolio-site-shell",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "check": "node --check scripts/app.js && node --check data/projects.js && node --check server.mjs"
+  }
+}

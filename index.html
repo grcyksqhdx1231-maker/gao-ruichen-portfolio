@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Gao Ruichen portfolio for visual, interaction, AI media, and experience design internships."
+    />
+    <title>Gao Ruichen Portfolio</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <div class="motion-loader" aria-hidden="true">
+      <div class="loader-line"></div>
+      <span data-i18n="loader">加载作品集</span>
+    </div>
+    <div class="cursor-orbit" aria-hidden="true"></div>
+    <div class="scroll-rail" aria-hidden="true">
+      <span></span>
+    </div>
+    <canvas id="archive-canvas" aria-hidden="true"></canvas>
+    <div class="scanline" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-mark">GR</span>
+        <span class="brand-name" id="brand-name">高瑞晨</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#projects" data-i18n="nav.work">作品</a>
+        <a href="#cv" data-i18n="nav.cv">简历</a>
+        <a href="#contact" data-i18n="nav.contact">联系</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="language-toggle" aria-label="Language switcher">
+          <button class="is-active" type="button" data-lang="zh">中文</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <a class="availability" href="./assets/resume.pdf" target="_blank" rel="noreferrer">
+          <span></span>
+          <span id="availability-text">投递实习作品集</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section-grid" aria-labelledby="hero-title">
+        <div class="hero-index" aria-hidden="true">
+          <span data-i18n="hero.index">001</span>
+          <span data-i18n="hero.indexLabel">视觉 / 交互 / AI 媒体</span>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow motion-item" data-motion="clip" data-i18n="hero.eyebrow">
+            前沿视觉与交互作品集
+          </p>
+          <h1 id="hero-title" class="hero-title motion-title" data-motion="title">
+            <span id="hero-name">高瑞晨</span>
+          </h1>
+          <div class="keyword-row motion-item" data-motion="lift" id="focus-list" aria-label="Focus areas"></div>
+        </div>
+
+        <aside class="profile-panel motion-panel" data-motion="panel" aria-label="Portfolio profile">
+          <div class="panel-topline">
+            <span data-i18n="hero.panelLabel">当前方向</span>
+            <strong id="profile-location">上海 / 视觉叙事 / 交互体验</strong>
+          </div>
+          <ul class="fact-list" id="fact-list"></ul>
+          <a class="panel-cta" href="./assets/resume.pdf" target="_blank" rel="noreferrer" data-i18n="hero.panelCta">
+          查看完整 CV PDF
+          </a>
+        </aside>
+        <div class="hero-marquee" aria-hidden="true">
+          <span data-marquee-text>VISUAL SYSTEMS / INTERACTION / AI MEDIA / SPATIAL STORYTELLING /</span>
+          <span data-marquee-text>VISUAL SYSTEMS / INTERACTION / AI MEDIA / SPATIAL STORYTELLING /</span>
+        </div>
+      </section>
+
+      <section class="archive-dashboard" aria-label="Portfolio overview">
+        <div class="metric">
+          <span id="project-count">00</span>
+          <p data-i18n="metrics.projects">已整理项目</p>
+        </div>
+        <div class="metric">
+          <span id="category-count">00</span>
+          <p data-i18n="metrics.categories">创作方向</p>
+        </div>
+        <div class="metric">
+          <span>CV</span>
+          <p data-i18n="metrics.cv">简历摘要</p>
+        </div>
+      </section>
+
+      <section id="projects" class="projects-section" aria-labelledby="projects-title">
+        <div class="section-heading motion-section">
+          <p class="eyebrow" data-i18n="projects.eyebrow">作品索引</p>
+          <h2 id="projects-title" data-i18n="projects.title">精选作品档案</h2>
+          <p data-i18n="projects.intro">
+            项目按视觉、影像、空间与交互方向归档，展示作品媒介、素材状态与可打开文件。
+          </p>
+        </div>
+
+        <div class="category-filter" id="category-filter" aria-label="Project category filters"></div>
+
+        <div class="project-stage">
+          <div class="project-list" id="project-list"></div>
+          <aside class="preview-panel" id="preview-panel" aria-live="polite"></aside>
+        </div>
+      </section>
+
+      <section id="cv" class="cv-section" aria-labelledby="cv-title">
+        <div class="section-heading motion-section">
+          <p class="eyebrow" data-i18n="cv.eyebrow">Curriculum Vitae</p>
+          <h2 id="cv-title" data-i18n="cv.title">从建筑空间转向视觉与体验设计。</h2>
+        </div>
+
+        <div class="cv-layout">
+          <aside class="cv-summary">
+            <h3 id="cv-name">高瑞晨</h3>
+            <p id="cv-role">AIGC / 视觉交互方向</p>
+            <p id="cv-summary"></p>
+            <a class="asset-cta cv-pdf-link" href="./assets/resume.pdf" target="_blank" rel="noreferrer" data-i18n="cv.pdf">
+              打开 PDF 简历
+            </a>
+          </aside>
+          <div class="cv-main">
+            <div class="cv-block">
+              <div class="cv-block-heading">
+                <span>01</span>
+                <h3 data-i18n="cv.highlights">核心能力</h3>
+              </div>
+              <div class="cv-chip-grid" id="cv-highlights"></div>
+            </div>
+
+            <div class="cv-block" id="cv-sections"></div>
+
+            <div class="cv-block">
+              <div class="cv-block-heading">
+                <span>03</span>
+                <h3 data-i18n="cv.skills">工具与方法</h3>
+              </div>
+              <div class="skill-grid" id="skill-grid"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div>
+        <p class="eyebrow" data-i18n="footer.eyebrow">Contact</p>
+        <h2 data-i18n="footer.title">期待与您讨论实习机会。</h2>
+        <p data-i18n="footer.note">
+          qq邮箱：2587426946@qq.com; wechat: grc15094058122
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="./assets/resume.pdf" target="_blank" rel="noreferrer" data-i18n="footer.resume">CV PDF</a>
+        <a href="#top" data-i18n="footer.top">返回顶部</a>
+      </div>
+    </footer>
+
+    <script type="module" src="./scripts/app.js"></script>
+  </body>
+</html>

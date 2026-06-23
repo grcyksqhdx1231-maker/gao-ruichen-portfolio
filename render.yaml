@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: gao-ruichen-portfolio
+    runtime: static
+    buildCommand: npm run check
+    staticPublishPath: .
